@@ -17,8 +17,8 @@ function PokemonCard(props) {
         <div className='poke-card'>
             <p className='poke-id'>{pokemonData.id}</p>
             <div className='poke-img'>
-                {pokemonData.sprites ?
-                    <img src={pokemonData.sprites.front_default} alt={props.p.name} />
+                {pokemonData.sprites?
+                    <img src={pokemonData.sprites.other.dream_world.front_default} alt={props.p.name} />
                     : <span>Loading Image...</span>
                 }
             </div>
@@ -39,7 +39,7 @@ function PokemonCard(props) {
                   <div className='details'>
                     <div className='outlook'>
                         {pokemonData.sprites ?
-                                <img src={pokemonData.sprites.front_default} alt={props.p.name} />
+                                <img src={pokemonData.sprites.other.dream_world.front_default} alt={props.p.name} />
                                 : <span>Loading Image...</span>
                         }
                     </div>

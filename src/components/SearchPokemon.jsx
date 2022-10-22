@@ -6,7 +6,7 @@ function SearchPokemon(props) {
     const [search, setSearch] = useState('');
 
     function handleSubmit(e) {
-        e.prevetDefault();
+      e.preventDefault(); 
         props.setPokemon(props.pokemon.filter(p => {
            return  p.name.includes(search);
         }))
@@ -14,6 +14,7 @@ function SearchPokemon(props) {
     }
     
     function handleChange(e) {
+      // e.preventDefault();
         setSearch(e.target.value);
         props.setPokemon(props.pokemon.filter(p => {
            return p.name.includes(e.target.value);
